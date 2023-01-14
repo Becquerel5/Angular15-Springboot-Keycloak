@@ -1,0 +1,30 @@
+<app-menu></app-menu>
+<h1 class="text-danger" *ngIf="products">{{title}}</h1>
+  
+<div *ngIf="errormessage"  class="text-danger">
+   {{errormessage}}
+</div>
+
+<table class="table" *ngIf="products">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">Firstname</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <th scope="row">{{p.id}}</th>
+        <td>{{p.productname}}</td>
+        <td>{{p.firstName}}</td>
+        <td>{{p.lastName}}</td>
+        <td>{{p.emailId}}</td>
+        <td>Action</td>
+      </tr>
+      
+    </tbody>
+  </table>

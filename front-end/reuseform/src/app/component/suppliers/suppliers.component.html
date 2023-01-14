@@ -1,0 +1,21 @@
+<app-menu></app-menu>
+<h1 class="text-danger">{{title}}</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">name</th>
+        <th scope="col">supplier</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of suppliers" >
+        <th scope="row">{{s.id}}</th>
+        <td>{{s.name}}</td>
+        <td>{{s.supplier}}</td>
+        <td>@action</td>
+      </tr>
+      
+    </tbody>
+  </table>
